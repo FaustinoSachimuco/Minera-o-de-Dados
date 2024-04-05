@@ -1,4 +1,4 @@
-\chapter{Tema: Modelo Baseado em LLM para Discutir o Programa Eleitoral do Partido AD (Aliança Democrática)}
+\section{Tema: Modelo Baseado em LLM para Discutir o Programa Eleitoral do Partido AD (Aliança Democrática)}
 
 \subsubsection{Objectivo Geral}
 
