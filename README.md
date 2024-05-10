@@ -20,6 +20,11 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
 ## Metodologia
 ### Scrapping de Dados
 #### ...
+##### NLTK (Natural Language Toolkit):
+pela análise de sentimentos, tokenização e sinalização da polaridade de palavras, auxilia na identificação de linguagem negativa em textos, que pode estar associada a discursos de ódio, assédio ou discriminatórios, embora não seja uma regra. Algumas frases antiéticas podem ter valor positivo enquanto outras, com valores negativos podem não infringir a ética.
+
+##### Spacy (Industrial-Strength Natural Language Processing):
+para lematização de palavras, o que auxilia na verificação de ocorrências de determinados termos considerados potencialmente antiéticos em um texto.
 
 ### Tokenização
 #### ...
@@ -48,6 +53,8 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
 ## Referências Bibliográficas##
           https://ad2024.pt
           https://ad2024.pt/pdf/ad-programa-eleitoral.pdf
+          https://www.nltk.org/
+          https://spacy.io/
           novo - reportagem - https://www.cnnbrasil.com.br/internacional/alianca-democratica-deve-vencer-eleicoes-legislativas-aponta-projecao-da-cnn/
           novo - reportagem - https://www.cnnbrasil.com.br/internacional/governo-minoritario-de-centro-direita-assume-em-portugal-nesta-terca-feira-2/
           novo - reportagem - https://www.cnnbrasil.com.br/internacional/portugal-tem-instabilidade-e-confronto-com-extrema-direita-em-votacao-para-presidente-do-parlamento/
