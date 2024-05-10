@@ -1,5 +1,5 @@
-UNIVERSIDADE DO MINHO - UMINHO
-Mineração de Dados
+# UNIVERSIDADE DO MINHO - UMINHO
+# Mineração de Dados
 Alunos:
     PG50944 Fautisno Sachimuco - MMC
     PG50008 Marcos André Mussungo - MEI
