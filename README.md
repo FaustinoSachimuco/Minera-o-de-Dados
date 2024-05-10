@@ -1,9 +1,9 @@
 # UNIVERSIDADE DO MINHO - UMINHO
 ## Mineração de Dados
-Alunos:
-    PG50944 Fautisno Sachimuco - MMC
-    PG50008 Marcos André Mussungo - MEI
-    PG52762 Lívia Péres Bettero - MHD 
+** Alunos:
+    * PG50944 Fautisno Sachimuco - MMC
+    * PG50008 Marcos André Mussungo - MEI
+    * PG52762 Lívia Péres Bettero - MHD 
 
 
 # Tema: Modelo Baseado em LLM para Discutir o Programa Eleitoral do Partido AD (Aliança Democrática)
