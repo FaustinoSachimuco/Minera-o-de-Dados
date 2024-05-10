@@ -1,9 +1,9 @@
 # UNIVERSIDADE DO MINHO - UMINHO
 ## Mineração de Dados
 ** Alunos: **
-    * PG50944 Fautisno Sachimuco - MMC *
-    * PG50008 Marcos André Mussungo - MEI *
-    * PG52762 Lívia Péres Bettero - MHD *
+    * PG50944 Fautisno Sachimuco - MMC
+    * PG50008 Marcos André Mussungo - MEI
+    * PG52762 Lívia Péres Bettero - MHD
 
 
 # Tema: Modelo Baseado em LLM para Discutir o Programa Eleitoral do Partido AD (Aliança Democrática)
@@ -18,19 +18,34 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
   . Web Scrapping de conteúdo de publicações em sites de notícias considerados confiáveis:
 
 ## Metodologia
-A metodologia adotada neste estudo envolverá várias etapas, incluindo o pré-processamento de textos e/ou outros tipos de dados, análise exploratória, desenvolvimento do modelo de previsão, validação do modelo e interpretação de resultados.
+### Scrapping de Dados
+#### ...
 
-subsubsection*{Pré-processamento de Dados:}
+### Tokenização
+#### ...
 
-Nesta fase, será realizado webscrapping as fontes de dados pré-selecionadas para construção de uma base de dados, o que inclui técnicas de pré-processamento para limpeza e estruturação adequada, tokenização do texto do Programa Eleitoral e tratamento de informações irrelevantes ou redundantes.
+#### ...
 
-\subsubsection*{Análise Exploratória:}
+### Embeddinging
+#### ...
+
+#### ...
+
+### Construção da Interface
+
+### Testes e Validação
 
 
-\subsubsection*{Desenvolvimento de Modelo de Previsão:}
+# Futuros Desafios
 
 
-##Referências Bibliográficas##
+# Conclusões
+
+
+
+
+
+## Referências Bibliográficas##
           https://ad2024.pt
           https://ad2024.pt/pdf/ad-programa-eleitoral.pdf
           novo - reportagem - https://www.cnnbrasil.com.br/internacional/alianca-democratica-deve-vencer-eleicoes-legislativas-aponta-projecao-da-cnn/
