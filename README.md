@@ -1,9 +1,9 @@
 # UNIVERSIDADE DO MINHO - UMINHO
 ## Mineração de Dados
 ** Alunos: **
-    * PG50944 Fautisno Sachimuco - MMC
-    * PG50008 Marcos André Mussungo - MEI
-    * PG52762 Lívia Péres Bettero - MHD
+    - PG50944 Fautisno Sachimuco - MMC
+    - PG50008 Marcos André Mussungo - MEI
+    - PG52762 Lívia Péres Bettero - MHD
 
 
 # Tema: Modelo Baseado em LLM para Discutir o Programa Eleitoral do Partido AD (Aliança Democrática)
@@ -19,7 +19,25 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
 
 ## Metodologia
 ### Scrapping de Dados
-#### ...
+#### Fontes de Dados, Bibliotecas e Ferramentas
+   Foram selecionados como fontes de dados os seguintes:
+   ##### Site oficial do partido Aliança Democrática, considerando textos do site e outros arquivos como o pdf com o proposta de governo
+   Foi utilizado o wget para baixar e analisar o que se podia extrair do site inicialmnete. Como comando, foi baixado o arquivo PDF da proposta de governo e algumas poucas páginas em formato html.
+   A extração dos textos do arquivo PDF contendo a proposta de governo do AD foi feita dentro da função *pdf_scrapping()* do código em python, com a biblioteca **PyPDF2** (https://pypi.org/project/pypdf/#description). Foram removidos caracteres como "• " e quebras de linha no meio de frases.
+   Já os textos em formato html do site, que incluíam hino, textos de apoio e notícias, foram extraídos na função *extrai_oficial()* usando as bibliotecas **jjcli** (https://pypi.org/project/jjcli/) e **BeautifulSoup** (https://pypi.org/project/beautifulsoup4/).
+      
+   ##### Sites de notícias de grandes veículos, considerados confiáveis.
+   Foi criada uma lista de sites indicados para extração dos arquivos. As noticias selecionadas passaram por análise humana devido á preocupação com questões éticas que envolvem o tipo de chatbot que seria treinado.
+   O código para extração dos textos seguiu o modelo do primeiro código utilizado no site oficial, mas por se tratar de sites com estruturas difertenes, foi necessário criar um segundo arquivo contendo a referência de que tags deveriam ser extraídas e que tags deveriam ser desconsideradas pelo script.
+   Os textos passaram também por uma limpeza para remoção de linhas em branco e caracteres especiais e pequenos blocos de texto indesejados como "Leia Mais", "&quot" e outros.   
+
+   ##### Vídeos oficiais do partido disponíveis no canal do Youtube
+   Para os vídeos oficiais disponíveis no youtube, inicialmente cogitou-se fazer download dos audios dos videos com a API do Youtube, seguida da transcrição com a API do Speech to Text do Google, mas ao final, a ferramenta Download Youtube Subtitles (https://www.downloadyoutubesubtitles.com/) resultou mais ágil para o volume de textos que se precisava baixar.
+   Os textos foram gravados em arquivos individuais e postos em uma pasta para tratamento via script onde foram remividas quebras de linhas.
+   
+Ao fim do scarapping, os textos extraídos foram gravados no mesmo arquiv, "SAIDA.txt"
+
+
 ##### NLTK (Natural Language Toolkit):
 pela análise de sentimentos, tokenização e sinalização da polaridade de palavras, auxilia na identificação de linguagem negativa em textos, que pode estar associada a discursos de ódio, assédio ou discriminatórios, embora não seja uma regra. Algumas frases antiéticas podem ter valor positivo enquanto outras, com valores negativos podem não infringir a ética.
 
