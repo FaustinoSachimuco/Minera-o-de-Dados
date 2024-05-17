@@ -40,8 +40,7 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
 Ao fim do scarapping, os textos extraídos foram gravados no mesmo arquiv, "SAIDA.txt"
 
 Mesmo nos textos extraídos de sites confiáveis e de publições oficiais do partido AD, ainda foi possível identificar partes de discursos que precisariam ser filtradas por questões éticas, principalmente nas transcrições de vídeos de candidatos do AD no youtube, tais como:
-
-- *"Eu sei que o líder do PS adora automóveis de luxo – agora parece que os esconde (...)"*
+- *Eu sei que o líder do PS adora automóveis de luxo – agora parece que os esconde (...)*
 - *"(...) comparar o doutor Nuno Santos com o professor Cavaco Silva é comparar um Ferrari com um calhambeque encostado numa garagem (...)"*
 - *"(...) o partido socialista e Pedro Nuno Santos que enquanto Ministro mostrou tudo menos preparação."*
 - *"Torna-se vital inverter uma gestão socialista caótica (...)"*
