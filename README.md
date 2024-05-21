@@ -15,7 +15,7 @@ Desenvolver e avaliar um modelo baseado em Linguagem Natural (LLM) para discutir
 A fonte de dados para este projeto foi constituída a partir das seguintes fontes:
   . Programa Eleitoral em PDF
   . Web Scrapping de conteúdo do site oficial
-  . Web Scrapping de conteúdo de publicações em sites de notícias considerados confiáveis:
+  . Web Scrapping de conteúdo de publicações em sites de notícias considerados confiáveis
 
 ## Metodologia
 ### Scrapping de Dados
@@ -81,30 +81,53 @@ para lematização de palavras, o que auxilia na verificação de ocorrências d
           https://ad2024.pt/pdf/ad-programa-eleitoral.pdf
           https://www.nltk.org/
           https://spacy.io/
-          novo - reportagem - https://www.cnnbrasil.com.br/internacional/alianca-democratica-deve-vencer-eleicoes-legislativas-aponta-projecao-da-cnn/
-          novo - reportagem - https://www.cnnbrasil.com.br/internacional/governo-minoritario-de-centro-direita-assume-em-portugal-nesta-terca-feira-2/
-          novo - reportagem - https://www.cnnbrasil.com.br/internacional/portugal-tem-instabilidade-e-confronto-com-extrema-direita-em-votacao-para-presidente-do-parlamento/
-          novo - reportagem - https://www.cnnbrasil.com.br/internacional/alianca-vencedora-das-eleicoes-em-portugal-tenta-contornar-extrema-direita-com-gastos/
-          novo - reportagem - https://www.cnnbrasil.com.br/internacional/chega-nao-ganhou-as-eleicoes-em-portugal-mas-e-o-maior-vitorioso-da-noite/
-          novo - reportagem - https://www.cnnbrasil.com.br/internacional/portugal-vai-as-urnas-em-eleicao-que-ocorre-dois-anos-antes-do-previsto/
-          novo - reportagem - https://rr.sapo.pt/noticia/politica/2024/02/13/alianca-democratica-apresenta-programa-eleitoral-queremos-virar-a-pagina-do-desespero/366201/
-          novo - reportagem - https://www.voaportugues.com/a/portugal-l%C3%ADder-da-alian%C3%A7a-democr%C3%A1tica-sem-maioria-assume-que-far%C3%A1-governo/7522196.html
-          novo - reportagem - https://www.rfi.fr/pt/mundo/20240311-alian%C3%A7a-democr%C3%A1tica-ganha-por-pouco-e-chega-consegue-eleger-48-deputados
-          novo - reportagem - https://www.dn.pt/3040673111/projecoes-dao-vitoria-a-alianca-democratica-e-grande-crescimento-do-chega/
-          novo - reportagem - https://www.rtp.pt/noticias/politica/alianca-democratica-em-busca-de-uma-efetiva-mudanca-politica_es1552304
-          novo - reportagem - https://observador.pt/2024/02/05/alianca-democratica-vence-mas-fica-a-tres-deputados-da-maioria/
-          novo - reportagem - https://www.publico.pt/2024/01/06/politica/noticia/alianca-democratica-propoe-governo-maioritario-condena-radicalismo-ideologico-2075938
-          novo - reportagem - https://sicnoticias.pt/pais/2024-01-10-Alianca-Democratica-2.0-reescrever-o-passado-e-eclipsar-o-presente-7e81edb2
-          novo - reportagem - https://eco.sapo.pt/2023/12/21/psd-e-cds-anunciam-coligacao-alianca-democratica/
-          novo - reportagem - https://eco.sapo.pt/2024/02/09/alianca-democratica-ja-divulgou-programa-eleitoral-com-mote-mudanca-segura-leia-aqui/
-          novo - reportagem - https://visao.pt/atualidade/politica/2023-12-15-ad-3-0-as-historias-e-memorias-da-alianca-democratica-que-juntou-os-aliados-mais-fiaveis/
-          novo - reportagem - https://visao.pt/atualidade/politica/2024-03-08-alianca-democratica-faz-o-ultimo-apelo-ao-voto-util-e-aos-indecisos/
-          novo - reportagem - https://visao.pt/atualidade/politica/2024-01-06-eleicoes-acordo-da-ad-destaca-experiencia-de-governo-e-alerta-para-afinidade-do-ps-com-esquerda-radical/
-          novo - reportagem - https://visao.pt/atualidade/politica/2023-12-21-e-oficial-vem-ai-uma-nova-ad/
-          novo - reportagem - https://capmagellan.com/carlos-goncalves-alianca-democratica/
-          novo - reportagem - https://www.poder360.com.br/internacional/alianca-de-centro-direita-diz-ter-vencido-eleicao-em-portugal/
-          novo - reportagem - https://g1.globo.com/mundo/noticia/2024/03/10/urnas-fecham-em-portugal-os-tres-partidos-com-mais-chances-aguardam-os-resultados.ghtml
-          novo - reportagem - https://g1.globo.com/mundo/blog/sandra-cohen/post/2024/03/11/terceira-forca-politica-chega-impora-instabilidade-e-complicada-governabilidade-em-portugal.ghtml
-          novo - reportagem - https://g1.globo.com/mundo/noticia/2024/03/28/presidente-de-portugal-aprova-ministerio-de-novo-primeiro-ministro-que-vai-governar-com-minoria-no-parlamento.ghtml
-          novo - reportagem - https://eco.sapo.pt/2024/01/07/a-saude-e-a-grande-prioridade-social-do-governo-da-alianca-democatica/
-          novo - reportagem - https://cnnportugal.iol.pt/eleicoes-legislativas/eleicoes/alianca-democratica-ganhou-sera-que-chega/20240311/65ee43e2d34e8d13c9b8ad76
+Para converter a lista de sites em referências bibliográficas no estilo ABNT (Associação Brasileira de Normas Técnicas), siga o formato específico para referências de sites e artigos online. Aqui está como ficaria a conversão das informações fornecidas:
+
+
+CAP MAGELLAN. Carlos Gonçalves Aliança Democrática. Disponível em: <https://capmagellan.com/carlos-goncalves-alianca-democratica/>. Acesso em: 21 maio 2024.
+
+CNN BRASIL. Aliança Democrática deve vencer eleições legislativas, aponta projeção da CNN. Disponível em: <https://www.cnnbrasil.com.br/internacional/alianca-democratica-deve-vencer-eleicoes-legislativas-aponta-projecao-da-cnn/>. Acesso em: 21 maio 2024.
+
+_____. Governo minoritário de centro-direita assume em Portugal nesta terça-feira (2). Disponível em: <https://www.cnnbrasil.com.br/internacional/governo-minoritario-de-centro-direita-assume-em-portugal-nesta-terca-feira-2/>. Acesso em: 21 maio 2024.
+
+_____. Portugal tem instabilidade e confronto com extrema direita em votação para presidente do parlamento. Disponível em: <https://www.cnnbrasil.com.br/internacional/portugal-tem-instabilidade-e-confronto-com-extrema-direita-em-votacao-para-presidente-do-parlamento/>. Acesso em: 21 maio 2024.
+
+_____. Aliança vencedora das eleições em Portugal tenta contornar extrema direita com gastos. Disponível em: <https://www.cnnbrasil.com.br/internacional/alianca-vencedora-das-eleicoes-em-portugal-tenta-contornar-extrema-direita-com-gastos/>. Acesso em: 21 maio 2024.
+
+_____. Chega não ganhou as eleições em Portugal, mas é o maior vitorioso da noite. Disponível em: <https://www.cnnbrasil.com.br/internacional/chega-nao-ganhou-as-eleicoes-em-portugal-mas-e-o-maior-vitorioso-da-noite/>. Acesso em: 21 maio 2024.
+
+_____. Portugal vai às urnas em eleição que ocorre dois anos antes do previsto. Disponível em: <https://www.cnnbrasil.com.br/internacional/portugal-vai-as-urnas-em-eleicao-que-ocorre-dois-anos-antes-do-previsto/>. Acesso em: 21 maio 2024.
+
+DIÁRIO DE NOTÍCIAS. Projeções dão vitória à Aliança Democrática e grande crescimento do Chega. Disponível em: <https://www.dn.pt/3040673111/projecoes-dao-vitoria-a-alianca-democratica-e-grande-crescimento-do-chega/>. Acesso em: 21 maio 2024.
+
+ECO. PSD e CDS anunciam coligação Aliança Democrática. Disponível em: <https://eco.sapo.pt/2023/12/21/psd-e-cds-anunciam-coligacao-alianca-democratica/>. Acesso em: 21 maio 2024.
+
+ _____. Aliança Democrática já divulgou programa eleitoral com mote "Mudança Segura". Disponível em: <https://eco.sapo.pt/2024/02/09/alianca-democratica-ja-divulgou-programa-eleitoral-com-mote-mudanca-segura-leia-aqui/>. Acesso em: 21 maio 2024.
+
+_____. A saúde é a grande prioridade social do governo da Aliança Democrática. Disponível em: <https://eco.sapo.pt/2024/01/07/a-saude-e-a-grande-prioridade-social-do-governo-da-alianca-democatica/>. Acesso em: 21 maio 2024.
+
+G1. Urnas fecham em Portugal; os três partidos com mais chances aguardam os resultados. Disponível em: <https://g1.globo.com/mundo/noticia/2024/03/10/urnas
+
+OBSERVADOR. Aliança Democrática vence mas fica a três deputados da maioria. Disponível em: <https://observador.pt/2024/02/05/alianca-democratica-vence-mas-fica-a-tres-deputados-da-maioria/>. Acesso em: 21 maio 2024.
+
+PODER360. Aliança de centro-direita diz ter vencido eleição em Portugal. Disponível em: <https://www.poder360.com.br/internacional/alianca-de-centro-direita-diz-ter-vencido-eleicao-em-portugal/>. Acesso em: 21 maio 2024.
+
+PÚBLICO. Aliança Democrática propõe governo maioritário, condena radicalismo ideológico. Disponível em: <https://www.publico.pt/2024/01/06/politica/noticia/alianca-democratica-propoe-governo-maioritario-condena-radicalismo-ideologico-2075938>. Acesso em: 21 maio 2024.
+
+RÁDIO FRANÇA INTERNACIONAL. Aliança Democrática ganha por pouco e Chega consegue eleger 48 deputados. Disponível em: <https://www.rfi.fr/pt/mundo/20240311-alianca-democratica-ganha-por-pouco-e-chega-consegue-eleger-48-deputados>. Acesso em: 21 maio 2024.
+
+RÁDIO RENASCENÇA. Aliança Democrática apresenta programa eleitoral: "Queremos virar a página do desespero". Disponível em: <https://rr.sapo.pt/noticia/politica/2024/02/13/alianca-democratica-apresenta-programa-eleitoral-queremos-virar-a-pagina-do-desespero/366201/>. Acesso em: 21 maio 2024.
+
+RTP. Aliança Democrática em busca de uma efetiva mudança política. Disponível em: <https://www.rtp.pt/noticias/politica/alianca-democratica-em-busca-de-uma-efetiva-mudanca-politica_es1552304>. Acesso em: 21 maio 2024.
+
+SIC NOTÍCIAS. Aliança Democrática 2.0: reescrever o passado e eclipsar o presente. Disponível em: <https://sicnoticias.pt/pais/2024-01-10-Alianca-Democratica-2.0-reescrever-o-passado-e-eclipsar-o-presente-7e81edb2>. Acesso em: 21 maio 2024.
+
+VISÃO. AD 3.0: as histórias e memórias da Aliança Democrática que juntou os aliados mais fiáveis. Disponível em: <https://visao.pt/atualidade/politica/2023-12-15-ad-3-0-as-historias-e-memorias-da-alianca-democratica-que-juntou-os-aliados-mais-fiaveis/>. Acesso em: 21 maio 2024.
+
+ _____. Aliança Democrática faz o último apelo ao voto útil e aos indecisos. Disponível em: <https://visao.pt/atualidade/politica/2024-03-08-alianca-democratica-faz-o-ultimo-apelo-ao-voto-util-e-aos-indecisos/>. Acesso em: 21 maio 2024.
+ 
+_____. Eleições: Acordo da AD destaca experiência de governo e alerta para afinidade do PS com esquerda radical. Disponível em: <https://visao.pt/atualidade/politica/2024-01-06-eleicoes-acordo-da-ad-destaca-experiencia-de-governo-e-alerta-para-afinidade-do-ps-com-esquerda-radical/>. Acesso em: 21 maio 2024.
+
+_____. É oficial: vem aí uma nova AD. Disponível em: <https://visao.pt/atualidade/politica/2023-12-21-e-oficial-vem-ai-uma-nova-ad/>. Acesso em: 21 maio 2024.
+
+VOZ DA AMÉRICA. Portugal: Líder da Aliança Democrática sem maioria assume que fará governo. Disponível em: <https://www.voaportugues.com/a/portugal-l%C3%ADder-da-alian%C3%A7a-democr%C3%A1tica-sem-maioria-assume-que-far%C3%A1-governo/7522196.html>. Acesso em: 21 maio 2024.
