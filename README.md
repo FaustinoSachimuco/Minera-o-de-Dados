@@ -9,7 +9,7 @@
 # Tema: Modelo Baseado em LLM para Discutir o Programa Eleitoral do Partido AD (Aliança Democrática)
 
 ## Objectivo Geral
-Desenvolver e avaliar um modelo baseado em Linguagem Natural (LLM) para discutir com o usuário o as propostas de governo do Partido Aliança Democrática, com base em seu Programa Eleitoral apresentado nas eleições de 2024 - conteúdo do site oficial, vídeos do canal oficial e reportagens de sites confiáveis - de forma ética.
+Desenvolver um modelo baseado em Linguagem Natural (LLM) para discutir com o usuário o as propostas de governo do Partido Aliança Democrática, com base em seu Programa Eleitoral apresentado nas eleições de 2024 - conteúdo do site oficial, vídeos do canal oficial e reportagens de sites confiáveis - de forma ética.
 
 ## Fonte de Dados
 A fonte de dados para este projeto foi constituída a partir das seguintes fontes:
