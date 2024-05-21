@@ -13,9 +13,9 @@ Desenvolver um modelo baseado em Linguagem Natural (LLM) para discutir com o usu
 
 ## Fonte de Dados
 A fonte de dados para este projeto foi constituída a partir das seguintes fontes:
-  . Programa Eleitoral em PDF
-  . Web Scrapping de conteúdo do site oficial
-  . Web Scrapping de conteúdo de publicações em sites de notícias considerados confiáveis
+  . Programa Eleitoral em PDF;
+  . Web Scrapping de conteúdo do site oficial;
+  . Web Scrapping de conteúdo de publicações em sites de notícias considerados confiáveis.
 
 ## Metodologia
 ### Scrapping de Dados
