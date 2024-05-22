@@ -287,9 +287,7 @@ def create_context(question, df, max_len=1800, size="ada"):
     
 
 ### Função Resposta_Pergunta
-  Usamos o modelo GPT-3.5 Turbo Instruct  que é uma versão melhorada do GPT-3 (Generative Pre-trained Transformer 3) segue o estilo do InstructGPT, o que significa que é otimizado para seguir instruções específicas.
-  
-  Contexto Limitado: Ao contrário de alguns modelos maiores, o GPT-3.5 Turbo Instruct suporta apenas uma janela de contexto de 4.000 tokens. Isso significa que ele considera apenas os últimos 4.000 tokens do texto para gerar suas respostas.
+  Usamos o modelo GPT-3.5 Turbo Instruct  que é uma versão melhorada do GPT-3 (Generative Pre-trained Transformer 3) segue o estilo do InstructGPT, o que significa que é otimizado para seguir instruções específicas, ao contrário de alguns modelos maiores, o GPT-3.5 Turbo Instruct suporta apenas uma janela de contexto de 4.000 tokens. Isso significa que ele considera apenas os últimos 4.000 tokens do texto para gerar suas respostas.
   
   O custo do GPT-3.5 Turbo Instruct é de USD 1,50 por 1 milhão de tokens para entrada e USD 2,00 por 1 milhão de tokens para saída.
 
@@ -299,10 +297,12 @@ Temperatura: é um parâmetro que controla a aleatoriedade na geração de texto
 Valores mais altos de temperatura (por exemplo, 0,8) tornam as saídas mais aleatórias e criativas, enquanto valores mais baixos (por exemplo, 0,2) tornam as saídas mais determinísticas e focadas.
 
 Top-p (Penalização de Probabilidade):
+
 O parâmetro “top-p” (também conhecido como “nucleus sampling”) controla a probabilidade cumulativa das palavras geradas.
 Valores mais altos de “top-p” (por exemplo, 0,9) incluirão mais palavras no conjunto de saída, enquanto valores mais baixos (por exemplo, 0,3) restringirão a saída a um conjunto menor de palavras mais prováveis.
 
 Penalização de Frequência e Penalização de Presença:
+
 A penalização de frequência (frequency penalty) controla a repetição excessiva de palavras. Um valor maior reduz a repetição.
 A penalização de presença (presence penalty) controla a diversidade das palavras usadas. Um valor maior aumenta a diversidade.
 
