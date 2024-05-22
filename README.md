@@ -69,7 +69,14 @@ O texto filtrado foi gravado em um arquivo *TEXTO_SAIDA_FILTRADO.txt* e o proces
 
 
 ### Tokenização
-#### ...
+  Tokenização é o processo de dividir um texto em unidades menores chamadas "tokens". Esses tokens podem ser palavras, subpalavras, caracteres ou até símbolos específicos, dependendo do esquema de tokenização utilizado. A tokenização é um passo fundamental no processamento de texto porque facilita a manipulação e a análise do texto em um formato estruturado.
+#### tokenizer = tiktoken.get_encoding("cl100k_base")
+  usamos a função get_encoding da biblioteca tiktoken com paramêtro (cl100k_base) como esquema de codificação ou modelo de tokenização.
+##### cl100k_base 
+  Este esquema de codificação possui uma base de cerca de 100.000 tokens. Esses tokens podem incluir palavras inteiras, subpalavras, caracteres individuais, ou mesmo sequências de caracteres comuns, E é baseado no mêtodo de codificação de pares de bytes (BPE). Ele é  reversível e sem perdas de informações, oque significa que os tokens podem ser convertidos de volta para o texto original, comprime o texto, tornando a sequência de tokens mais curta do que os bytes correspondentes ao texto original.
+  
+      
+
 
 #### ...
 
