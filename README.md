@@ -39,16 +39,17 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
    Para os vídeos oficiais disponíveis no youtube, inicialmente cogitou-se fazer download dos audios dos videos com a *API do Youtube*, seguida da transcrição com a *API do Speech to Text do Google* mas a ferramenta *Download Youtube Subtitles* (https://www.downloadyoutubesubtitles.com/) resultou mais ágil para o volume de textos que se precisava baixar. Mesmo retirados do site oficial, a quantidade de vídeos disponíveis não justificaria o desenvolvimento de um código em Python devido à simplicidade e agilidade da alternativa web.
    Os textos foram gravados em arquivos individuais, revisados superficialmente para conferir a qualidade da transcrição e tratados em Python para remoção de quebras de linhas. Por fim, os textos extraídos foram adicionados ao arquivo *TEXTO_SAIDA.txt*.
 
+#### Filtragem de Textos
 Mesmo nos textos extraídos de sites confiáveis e de publições oficiais do partido AD, ainda foi possível identificar partes de discursos que precisariam ser filtradas por questões éticas, especialmente nas transcrições de vídeos de candidatos do AD no youtube, tais como:
 - *"Eu sei que o líder do PS adora automóveis de luxo – agora parece que os esconde (...)"*
 
-
-
+Entendendo necessária uma rotina que verificasse e filtrasse partes antiéticas dos textos recolhidos, foram adotadas as seguintes bibliotecas:
 ##### NLTK (Natural Language Toolkit):
-pela análise de sentimentos, tokenização e sinalização da polaridade de palavras, auxilia na identificação de linguagem negativa em textos, que pode estar associada a discursos de ódio, assédio ou discriminatórios, embora não seja uma regra. Algumas frases antiéticas podem ter valor positivo enquanto outras, com valores negativos podem não infringir a ética.
+Utilizada para análise de sentimentos, tokenização e sinalização da polaridade de palavras.
+Com esta biblioteca, foi possível categorizar as frades do texto em positivas, neutras e negativas, deixando claro algumas frases antiéticas podem ter valor positivo enquanto outras, com valores negativos podem não infringir a ética. Em alguns casos, mesmo quando não é identificada linguagem negativa, ainda pode ocorrer discursos de ódio, assédio ou discriminatórios, o que dependerá bastante do contexto, por isso fez-se necessário criar uma lista de palavras que deveriam ser obrigatoriamente consideradas negativas.
 
 ##### Spacy (Industrial-Strength Natural Language Processing):
-para lematização de palavras, o que auxilia na verificação de ocorrências de determinados termos considerados potencialmente antiéticos em um texto.
+A lematização foi essencial para ajudar na solução de parte do problema da filtragem ética. A partir de uma lista de 
 
 
 
