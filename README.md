@@ -132,7 +132,7 @@ def read_openai_api_key():
 my_api_key = read_openai_api_key()
 
 
-#### ...
+#### ... 
 
 ### Embeddinging
 Embeddings são vetores ou matrizes de números que representam o significado e o contexto dos tokens processados pelo modelo, são usados para codificar e decodificar os textos
@@ -180,7 +180,65 @@ df.to_csv('embeddings.csv')
 df.head()
 
 
-#### ...
+#### resultado
+
+  <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>texto</th>
+      <th>n_tokens</th>
+      <th>embeddings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Em 2024, teremos uma oportunidade única de esc...</td>
+      <td>125</td>
+      <td>[0.017937149852514267, 0.013401876203715801, 0...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>É por isso que apresentamos este Programa elei...</td>
+      <td>143</td>
+      <td>[0.06237228959798813, 0.003158759092912078, 0....</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Acreditamos que a educação, a ciência e a cult...</td>
+      <td>120</td>
+      <td>[0.06579941511154175, -0.008490086533129215, 0...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Acreditamos que a sustentabilidade, a agricult...</td>
+      <td>150</td>
+      <td>[0.048812080174684525, 0.03299587592482567, 0....</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Acreditamos que a coesão territorial e a desce...</td>
+      <td>110</td>
+      <td>[0.044376570731401443, 0.029419563710689545, 0...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ### Construção da Interface
 
