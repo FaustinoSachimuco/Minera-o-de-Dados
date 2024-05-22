@@ -30,7 +30,7 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
    ##### Sites de notícias de grandes veículos, considerados confiáveis.
    Desde o princípio do projeto, houve uma preocupação com a seleção das fontes de conteúdo a fim de evitar recolher material distorcido ou irreal de sites pouco confiáveis. Por isto, optou-se por criar uma lista de sites indicados para extração dos textos, cujas selecionadas passaram por análise humana.
    Mesmo com a seleção, entendeu-se necessário criar um código que ajudasse a identificar falas antiéticas que precisassem ser filtradas devido ao tema político do chatbot a ser treinado.
-   ![image: Exermplos de discursos eticamente inapropriados encontrados no texto](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/assets/121136618/0f260690-def6-4b15-8845-3566e3f83e5f)
+   ![image 1 : Exermplos de discursos eticamente inapropriados encontrados no texto](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/assets/121136618/0f260690-def6-4b15-8845-3566e3f83e5f)
 
    O código para extração dos textos seguiu o modelo do primeiro código utilizado no site oficial, mas por se tratar de sites com estruturas difertenes, foi necessário criar um segundo arquivo contendo a referência de que tags deveriam ser extraídas e que tags deveriam ser desconsideradas pelo script.
    Os textos passaram também por uma limpeza para remoção de linhas em branco e caracteres especiais e pequenos blocos de texto indesejados como "Leia Mais", "&quot" e outros, antes de serem adicionados ao arquivo *TEXTO_SAIDA.txt*.
@@ -56,6 +56,9 @@ O código de filtragem com a combinação da lista de palavras negativas, as fun
 - *"(...) o partido socialista e Pedro Nuno Santos que enquanto Ministro mostrou tudo menos preparação."*
 - *"(...) a experiência do líder do Partido Socialista está marcada por exemplos dessa cultura de informalidade (...)"*
 
+O texto com o filtro ético aplicado foi gravado no arquivo *TEXTO_SAIDA_FILTRADO.txt* e o processo de scrapping ficou definido da seguinte forma:
+
+![image 2 - Fluxo alcançado durante o tratamento de texto de scraping para treinamento de chatbot político](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/assets/121136618/e36e519b-5518-4f8b-8094-9e47af271652)
 
 
 ### Tokenização
