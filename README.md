@@ -22,14 +22,15 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
 #### Fontes de Dados, Bibliotecas e Ferramentas
    Foram selecionados como fontes de dados os seguintes:
    ##### Site oficial do partido Aliança Democrática, considerando textos do site e outros arquivos como o pdf com o proposta de governo
-   Foi utilizado o wget para baixar e analisar o que se podia extrair do site inicialmnete. Como comando, foi baixado o arquivo PDF da proposta de governo e algumas poucas páginas em formato html.
-   A extração dos textos do arquivo PDF contendo a proposta de governo do AD foi feita dentro da função *pdf_scrapping()* do código em python, com a biblioteca **PyPDF2** (https://pypi.org/project/pypdf/#description). Foram removidos caracteres como "• " e quebras de linha no meio de frases.
-   Já os textos em formato html do site, que incluíam hino, textos de apoio e notícias, foram extraídos na função *extrai_oficial()* usando as bibliotecas **jjcli** (https://pypi.org/project/jjcli/) e **BeautifulSoup** (https://pypi.org/project/beautifulsoup4/).
-      
+   Utilisou-se o wget para baixar todo o conteúdo disponível do site, como o arquivo PDF da proposta de governo e algumas poucas páginas em formato html.
+   Para extração dos textos do arquivo PDF da proposta de governo, construiu-se a função *pdf_scrapping()* em python, utilizando a biblioteca *PyPDF2* (https://pypi.org/project/pypdf/#description). Caracteres como "• " e quebras de linha no meio de frases foram removidos nesta mesma função e os texto limpo foi gravado no arquivo *TEXTO_SAIDA.txt*.
+   
+   O conteúdo em html do site, contando com hino, textos de apoio e notícias, foram extraídos na função *extrai_oficial()* usando as bibliotecas *jjcli* (https://pypi.org/project/jjcli/) e *BeautifulSoup* (https://pypi.org/project/beautifulsoup4/) para extração do texto dentro das tags específicas que interessavam ao projeto. O texto extraído de cada página foi adicionado ao arquivo *TEXTO_SAIDA.txt*.
+         
    ##### Sites de notícias de grandes veículos, considerados confiáveis.
-   Foi criada uma lista de sites indicados para extração dos arquivos. As noticias selecionadas passaram por análise humana devido á preocupação com questões éticas que envolvem o tipo de chatbot que seria treinado.
+   Desde o princípio do projeto, houve uma preocupação com a seleção das fontes de conteúdo a fim de evitar recolher material distorcido ou irreal de sites pouco confiáveis. Por isto, optou-se por criar uma lista de sites indicados para extração dos textos, cujas selecionadas passaram por análise humana.
+   Mesmo com a seleção, entendeu-se necessário criar um código que ajudasse a identificar falas antiéticas que precisassem ser filtradas devido ao tema político do chatbot a ser treinado.
    ![image: Exermplos de discursos eticamente inapropriados encontrados no texto](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/assets/121136618/0f260690-def6-4b15-8845-3566e3f83e5f)
-
 
    O código para extração dos textos seguiu o modelo do primeiro código utilizado no site oficial, mas por se tratar de sites com estruturas difertenes, foi necessário criar um segundo arquivo contendo a referência de que tags deveriam ser extraídas e que tags deveriam ser desconsideradas pelo script.
    Os textos passaram também por uma limpeza para remoção de linhas em branco e caracteres especiais e pequenos blocos de texto indesejados como "Leia Mais", "&quot" e outros.   
