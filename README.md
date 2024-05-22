@@ -381,6 +381,47 @@ def answer_question(
   
   
 ### Construção da Interface
+Usamos a biblioteca gradio para criação da nossa interface
+
+def chatgpt_clone(input, history):
+
+    history= history or []
+    
+    s = list(sum(history, ()))
+    
+    s.append(input)
+    
+    inp = ' '.join(s)
+    
+    output=answer_question(question = inp)
+    
+    history.append((input, output))
+    
+    return history, history
+    
+with gr.Blocks(theme=gr.themes.Soft(),css=".gradio-container {background-color: lightsteelblue}") as block:
+
+    with gr.Row():
+    
+        img1 = gr.Image("images/ad.png",show_label=False, width=100, height=100)
+        
+        img2 = gr.Image("images/ad1.png",show_label=False, width=100, height=100)
+        
+    gr.Markdown("""<h1><center>Chatbot Aliança Democrática Grupo Nº 11 </center></h1>""")
+    
+    chatbot=gr.Chatbot(label="Conversa")
+    
+    message=gr.Textbox(label="Faça sua pergunta",placeholder="O que você gostaria de saber sobre Aliança Democrática?")
+    
+    state = gr.State()
+    
+    submit = gr.Button("Perguntar")
+    
+    submit.click(chatgpt_clone, inputs=[message, state], outputs=[chatbot, state])
+    
+
+block.launch(debug=True)    
+
 
 ### Testes e Validação
 
