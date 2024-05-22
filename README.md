@@ -180,7 +180,7 @@ df.to_csv('embeddings.csv')
 df.head()
 
 
-#### resultado
+#### Resultado do Embedding
 
   <div>
 <style scoped>
