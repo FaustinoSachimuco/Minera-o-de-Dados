@@ -36,9 +36,8 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
    Os textos passaram também por uma limpeza para remoção de linhas em branco e caracteres especiais e pequenos blocos de texto indesejados como "Leia Mais", "&quot" e outros, antes de serem adicionados ao arquivo *TEXTO_SAIDA.txt*.
 
    ##### Vídeos oficiais do partido disponíveis no canal do Youtube
-   Para os vídeos oficiais disponíveis no youtube, inicialmente cogitou-se fazer download dos audios dos videos com a API do Youtube, seguida da transcrição com a API do Speech to Text do Google, mas ao final, a ferramenta Download Youtube Subtitles (https://www.downloadyoutubesubtitles.com/) resultou mais ágil para o volume de textos que se precisava baixar.
-   Os textos foram gravados em arquivos individuais e postos em uma pasta para tratamento via script onde foram remividas quebras de linhas.
-Ao fim do scarapping, os textos extraídos foram gravados no mesmo arquiv, "SAIDA.txt"
+   Para os vídeos oficiais disponíveis no youtube, inicialmente cogitou-se fazer download dos audios dos videos com a *API do Youtube*, seguida da transcrição com a *API do Speech to Text do Google* mas a ferramenta *Download Youtube Subtitles* (https://www.downloadyoutubesubtitles.com/) resultou mais ágil para o volume de textos que se precisava baixar. Mesmo retirados do site oficial, a quantidade de vídeos disponíveis não justificaria o desenvolvimento de um código em Python devido à simplicidade e agilidade da alternativa web.
+   Os textos foram gravados em arquivos individuais, revisados superficialmente para conferir a qualidade da transcrição e tratados em Python para remoção de quebras de linhas. Por fim, os textos extraídos foram adicionados ao arquivo *TEXTO_SAIDA.txt*.
 
 Mesmo nos textos extraídos de sites confiáveis e de publições oficiais do partido AD, ainda foi possível identificar partes de discursos que precisariam ser filtradas por questões éticas, principalmente nas transcrições de vídeos de candidatos do AD no youtube, tais como:
 - *"Eu sei que o líder do PS adora automóveis de luxo – agora parece que os esconde (...)"*
