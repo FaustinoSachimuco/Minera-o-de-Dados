@@ -70,11 +70,55 @@ O texto filtrado foi gravado em um arquivo *TEXTO_SAIDA_FILTRADO.txt* e o proces
 
 ### Tokenização
   Tokenização é o processo de dividir um texto em unidades menores chamadas "tokens". Esses tokens podem ser palavras, subpalavras, caracteres ou até símbolos específicos, dependendo do esquema de tokenização utilizado. A tokenização é um passo fundamental no processamento de texto porque facilita a manipulação e a análise do texto em um formato estruturado.
+  
 #### tokenizer = tiktoken.get_encoding("cl100k_base")
   usamos a função get_encoding da biblioteca tiktoken com paramêtro (cl100k_base) como esquema de codificação ou modelo de tokenização.
+  
 ##### cl100k_base 
   Este esquema de codificação possui uma base de cerca de 100.000 tokens. Esses tokens podem incluir palavras inteiras, subpalavras, caracteres individuais, ou mesmo sequências de caracteres comuns, E é baseado no mêtodo de codificação de pares de bytes (BPE). Ele é  reversível e sem perdas de informações, oque significa que os tokens podem ser convertidos de volta para o texto original, comprime o texto, tornando a sequência de tokens mais curta do que os bytes correspondentes ao texto original.
-  
+
+#### Função para dividir o Texto em partes de um número máximo de 2000 tokens
+
+  max_tokens = 2000
+def split_into_many(texto, max_tokens = max_tokens):
+    
+    sentences = texto.split('. ')
+
+    n_tokens = [len(tokenizer.encode(" " + sentence)) for sentence in sentences]
+    
+    chunks = []
+    tokens_so_far = 0
+    chunk = []
+
+    
+    for sentence, token in zip(sentences, n_tokens):
+
+        if tokens_so_far + token > max_tokens:
+            chunks.append(". ".join(chunk) + ".")
+            chunk = []
+            tokens_so_far = 0
+
+        if token > max_tokens:
+            continue
+
+        chunk.append(sentence)
+        tokens_so_far += token + 1
+
+    return chunks
+    
+
+shortened = []
+
+for row in df.iterrows():
+
+    if row[1]['texto'] is None:
+        continue
+
+    if row[1]['n_tokens'] > max_tokens:
+        shortened += split_into_many(row[1]['texto'])
+    
+    else:
+        shortened.append( row[1]['texto'] )
       
 
 
