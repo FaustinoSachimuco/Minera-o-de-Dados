@@ -373,7 +373,11 @@ def answer_question(
         
     #     retornar ""
     
+### Pergunta:   answer_question(question="O que é a Alianca Democratica?", debug=False)
+### Resposta:
 
+  'A Aliança Democrática é uma coligação política formada pelos partidos PSD, CDS-PP e PPM, juntamente com personalidades independentes, que propõe uma mudança política e de políticas no país, com o objetivo de promover a prosperidade, o crescimento econômico e as oportunidades para todos os portugueses. Foi criada em 1979 e reeditada em 2024, com o objetivo de governar o país e superar o ciclo de governação socialista.'
+  
   
   
 ### Construção da Interface
