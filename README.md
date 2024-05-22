@@ -287,7 +287,91 @@ def create_context(question, df, max_len=1800, size="ada"):
     
 
 ### Função Resposta_Pergunta
-  Usamos o modelo GPT-3.5 Turbo Instruct  que é uma versão melhorada do GPT-3 (Generative Pre-trained Transformer 3)
+  Usamos o modelo GPT-3.5 Turbo Instruct  que é uma versão melhorada do GPT-3 (Generative Pre-trained Transformer 3) segue o estilo do InstructGPT, o que significa que é otimizado para seguir instruções específicas.
+Contexto Limitado: Ao contrário de alguns modelos maiores, o GPT-3.5 Turbo Instruct suporta apenas uma janela de contexto de 4.000 tokens. Isso significa que ele considera apenas os últimos 4.000 tokens do texto para gerar suas respostas.
+O custo do GPT-3.5 Turbo Instruct é de USD 1,50 por 1 milhão de tokens para entrada e USD 2,00 por 1 milhão de tokens para saída.
+
+#### paramêtros:
+
+Temperatura: é um parâmetro que controla a aleatoriedade na geração de texto pelo modelo.
+Valores mais altos de temperatura (por exemplo, 0,8) tornam as saídas mais aleatórias e criativas, enquanto valores mais baixos (por exemplo, 0,2) tornam as saídas mais determinísticas e focadas.
+
+Top-p (Penalização de Probabilidade):
+O parâmetro “top-p” (também conhecido como “nucleus sampling”) controla a probabilidade cumulativa das palavras geradas.
+Valores mais altos de “top-p” (por exemplo, 0,9) incluirão mais palavras no conjunto de saída, enquanto valores mais baixos (por exemplo, 0,3) restringirão a saída a um conjunto menor de palavras mais prováveis.
+
+Penalização de Frequência e Penalização de Presença:
+A penalização de frequência (frequency penalty) controla a repetição excessiva de palavras. Um valor maior reduz a repetição.
+A penalização de presença (presence penalty) controla a diversidade das palavras usadas. Um valor maior aumenta a diversidade.
+
+
+def answer_question(
+
+                    df=df,
+                    
+                    model="gpt-3.5-turbo-instruct",
+                    
+                    question="O que é a Alianca Democratica?",
+                    
+                    max_len=1800,
+                    
+                    size="ada",
+                    
+                    debug=False,
+                    
+                    max_tokens=150,
+                    
+                    stop_sequence=None):
+                    
+    """
+    
+    Responder a uma pergunta com base no contexto mais semelhante dos textos do dataframe
+    
+    """
+    
+    context = create_context(question, df=df, max_len=max_len,size=size)
+    
+    if debug:
+    
+        print("Context:\n" + context)
+        
+        print("\n\n")
+        
+
+    try:
+    
+        # Criar uma conclusão usando a pergunta e o contexto
+        
+        response = openai.Completion.create(
+        
+            prompt=f"Responda as perguntas com base no contexto abaixo, e se a pergunta não puder ser respondida diga \"Eu não sei responder isso\"\n\Contexto: {context}\n\n---
+            \n\nPergunta: {question}\nResposta:",
+            
+            temperature=0,
+            
+            max_tokens=max_tokens,
+            
+            top_p=1,
+            
+            frequency_penalty=0,
+            
+            presence_penalty=0,
+            
+            stop=stop_sequence,
+            
+            model=model
+            
+        )
+        
+        return response["choices"][0]["text"].strip()
+        
+    except Exception as e:
+    
+        print(e)
+        
+    #     retornar ""
+    
+
   
   
 ### Construção da Interface
