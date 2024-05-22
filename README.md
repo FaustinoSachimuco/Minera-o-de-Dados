@@ -160,7 +160,7 @@ for tex in df['texto']:
         
     except openai.error.RateLimitError:
     
-        print("Rate limit error, esperando 10 segundo antes de tentar novamente")
+        print("Rate limit error, esperando 20 segundo antes de tentar novamente")
         
         time.sleep(20)  
         
