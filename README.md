@@ -128,7 +128,7 @@ def read_openai_api_key():
         api_key = file.read().strip()
         
     return api_key
-
+    
 my_api_key = read_openai_api_key()
 
 
