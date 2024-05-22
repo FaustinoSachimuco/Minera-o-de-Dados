@@ -242,10 +242,13 @@ df.head()
 
 ### Função para Criar o Contexto
 
-  def create_context(question, df, max_len=1800, size="ada"):
-  """
-  Cria um contexto para uma pergunta encontrando o contexto mais similar no conjunto de embeddings gerado utilizando o Custom Knowledge.
-  """
+def create_context(question, df, max_len=1800, size="ada"):
+
+"""
+
+Cria um contexto para uma pergunta encontrando o contexto mais similar no conjunto de embeddings gerado utilizando o Custom Knowledge
+
+"""
 
     """ Obter a embeddings para a pergunta que foi feita """
     
