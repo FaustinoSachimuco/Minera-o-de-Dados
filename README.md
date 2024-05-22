@@ -121,10 +121,10 @@ def split_into_many(texto, max_tokens = max_tokens):
       
 ### função para leitura da nossa API
 
-  def read_openai_api_key():
+def read_openai_api_key():
     with open('openai_chave.txt', 'r') as file:
-      api_key = file.read().strip()
-      return api_key
+        api_key = file.read().strip()
+    return api_key
 
 my_api_key = read_openai_api_key()
 
