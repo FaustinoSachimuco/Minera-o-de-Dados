@@ -79,9 +79,8 @@ O texto filtrado foi gravado em um arquivo *TEXTO_SAIDA_FILTRADO.txt* e o proces
 
 #### Função para dividir o Texto em partes de um número máximo de 2000 tokens
 
-  max_tokens = 2000
-def split_into_many(texto, max_tokens = max_tokens):
-    
+max_tokens = 2000
+def split_into_many(texto, max_tokens = max_tokens):  
     sentences = texto.split('. ')
 
     n_tokens = [len(tokenizer.encode(" " + sentence)) for sentence in sentences]
@@ -106,9 +105,7 @@ def split_into_many(texto, max_tokens = max_tokens):
 
     return chunks
     
-
 shortened = []
-
 for row in df.iterrows():
 
     if row[1]['texto'] is None:
