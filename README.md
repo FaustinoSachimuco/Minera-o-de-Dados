@@ -440,7 +440,7 @@ capacidade do modelo de compreender e responder adequadamente às perguntas.
 ## Avaliação de Usuários e Retroalimentação: 
 
 Coletar feedback dos usuários e realizar avaliações de usabilidade  para entender 
-como o modelo está sendo utilizada na prática e identificar áreas de melhoria. 
+como o modelo está sendo utilizado na prática e identificar áreas de melhoria. 
 Incorporar mecanismos de feedback e análise de métricas de desempenho. 
 
 # Conclusões
