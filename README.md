@@ -425,6 +425,8 @@ block.launch(debug=True)
 
 ### Testes e Validação
 
+![image](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/blob/main/images/Interface.PNG)
+
 
 
 
