@@ -434,13 +434,13 @@ block.launch(debug=True)
 ## Gerenciamento de Contexto Dinâmico: 
 Lidar com o contexto dinâmico pode ser um desafio, 
 especialmente em conversações longas ou em situações onde o contexto muda rapidamente. 
-Desenvolver estratégias para manter e atualizar o contexto de forma eficiente pode melhorar a 
-capacidade do sistema de compreender e responder adequadamente às perguntas.
+Desenvolver estratégias para manter e atualizar o contexto de forma eficiente melhora a 
+capacidade do modelo de compreender e responder adequadamente às perguntas.
 
 ## Avaliação de Usuários e Retroalimentação: 
 
 Coletar feedback dos usuários e realizar avaliações de usabilidade  para entender 
-como modelo está sendo utilizada na prática e identificar áreas de melhoria. 
+como o modelo está sendo utilizada na prática e identificar áreas de melhoria. 
 Incorporar mecanismos de feedback e análise de métricas de desempenho. 
 
 # Conclusões
