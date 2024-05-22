@@ -49,13 +49,11 @@ Utilizada para análise de sentimentos, tokenização e sinalização da polarid
 Com esta biblioteca, foi possível categorizar as frades do texto em positivas, neutras e negativas, deixando claro algumas frases antiéticas podem ter valor positivo enquanto outras, com valores negativos podem não infringir a ética. Em alguns casos, mesmo quando não é identificada linguagem negativa, ainda pode ocorrer discursos de ódio, assédio ou discriminatórios, o que dependerá bastante do contexto, por isso fez-se necessário criar uma lista de palavras que deveriam ser obrigatoriamente consideradas negativas.
 
 ##### Spacy (Industrial-Strength Natural Language Processing):
-A lematização foi essencial para ajudar na solução de parte do problema da filtragem ética. A partir de uma lista de 
+A lematização foi essencial para ajudar na solução da filtragem ética. A partir da comparação dos lemas das palavras obrigatoriamente negativas e dos lemas do texto, foi possível chegar a uma contagem mínima de três palavras negativas em uma frase para considerá-la potencialmente anti-ética.
 
-
-
+O código de filtragem com a combinação da lista de palavras negativas, as funções da biblioteca NLTK e as funções de lematização da biblioteca Spacy permitiram filtrar frases como:
 - *"(...) comparar o doutor Nuno Santos com o professor Cavaco Silva é comparar um Ferrari com um calhambeque encostado numa garagem (...)"*
 - *"(...) o partido socialista e Pedro Nuno Santos que enquanto Ministro mostrou tudo menos preparação."*
-- *"Torna-se vital inverter uma gestão socialista caótica (...)"*
 - *"(...) a experiência do líder do Partido Socialista está marcada por exemplos dessa cultura de informalidade (...)"*
 
 
