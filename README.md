@@ -9,56 +9,63 @@
 # Tema: Modelo Baseado em LLM para Discutir o Programa Eleitoral do Partido AD (Aliança Democrática)
 
 ## Objectivo Geral
-Desenvolver um modelo baseado em Linguagem Natural (LLM) para discutir com o usuário o as propostas de governo do Partido Aliança Democrática, com base em seu Programa Eleitoral apresentado nas eleições de 2024 - conteúdo do site oficial, vídeos do canal oficial e reportagens de sites confiáveis - de forma ética.
+Desenvolver e avaliar um modelo baseado em Linguagem Natural (LLM) para discutir com o usuário o as propostas de governo do Partido Aliança Democrática, com base em seu Programa Eleitoral apresentado nas eleições de 2024 - conteúdo do site oficial, vídeos do canal oficial e reportagens de sites confiáveis - de forma ética.
 
 ## Fonte de Dados
 A fonte de dados para este projeto foi constituída a partir das seguintes fontes:
-  . Programa Eleitoral em PDF;
-  . Web Scrapping de conteúdo do site oficial;
-  . Web Scrapping de conteúdo de publicações em sites de notícias considerados confiáveis.
+  . Programa Eleitoral em PDF
+  . Web Scrapping de conteúdo do site oficial
+  . Web Scrapping de conteúdo de publicações em sites de notícias considerados confiáveis
 
 ## Metodologia
 ### Scrapping de Dados
 #### Fontes de Dados, Bibliotecas e Ferramentas
    Foram selecionados como fontes de dados os seguintes:
    ##### Site oficial do partido Aliança Democrática, considerando textos do site e outros arquivos como o pdf com o proposta de governo
-   Utilisou-se o wget para baixar todo o conteúdo disponível do site, como o arquivo PDF da proposta de governo e algumas poucas páginas em formato html.
-   Para extração dos textos do arquivo PDF da proposta de governo, construiu-se a função *pdf_scrapping()* em python, utilizando a biblioteca *PyPDF2* (https://pypi.org/project/pypdf/#description). Caracteres como "• " e quebras de linha no meio de frases foram removidos nesta mesma função e os texto limpo foi gravado no arquivo *TEXTO_SAIDA.txt*.
-   
-   O conteúdo em html do site, contando com hino, textos de apoio e notícias, foram extraídos na função *extrai_oficial()* usando as bibliotecas *jjcli* (https://pypi.org/project/jjcli/) e *BeautifulSoup* (https://pypi.org/project/beautifulsoup4/) para extração do texto dentro das tags específicas que interessavam ao projeto. O texto extraído de cada página foi adicionado ao arquivo *TEXTO_SAIDA.txt*.
-         
+   Utilisou-se o wget para baixar e analisar o que se podia extrair do site inicialmnete. Como comando, foi baixado o arquivo PDF da proposta de governo e algumas poucas páginas em formato html.
+   A extração dos textos do arquivo PDF contendo a proposta de governo do AD foi feita dentro da função *pdf_scrapping()* do código em python, com a biblioteca **PyPDF2** (https://pypi.org/project/pypdf/#description). Foram removidos caracteres como "• " e quebras de linha no meio de frases.
+   Já os textos em formato html do site, que incluíam hino, textos de apoio e notícias, foram extraídos na função *extrai_oficial()* usando as bibliotecas **jjcli** (https://pypi.org/project/jjcli/) e **BeautifulSoup** (https://pypi.org/project/beautifulsoup4/).
+      
    ##### Sites de notícias de grandes veículos, considerados confiáveis.
-   Desde o princípio do projeto, houve uma preocupação com a seleção das fontes de conteúdo a fim de evitar recolher material distorcido ou irreal de sites pouco confiáveis. Por isto, optou-se por criar uma lista de sites indicados para extração dos textos, cujas selecionadas passaram por análise humana.
-   Mesmo com a seleção, entendeu-se necessário criar um código que ajudasse a identificar falas antiéticas que precisassem ser filtradas devido ao tema político do chatbot a ser treinado.
-   ![image 1 : Exermplos de discursos eticamente inapropriados encontrados no texto](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/assets/121136618/0f260690-def6-4b15-8845-3566e3f83e5f)
+   Foi criada uma lista de sites indicados para extração dos arquivos. As noticias selecionadas passaram por análise humana devido á preocupação com questões éticas que envolvem o tipo de chatbot que seria treinado.
+   ![image: Exermplos de discursos eticamente inapropriados encontrados no texto](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/assets/121136618/0f260690-def6-4b15-8845-3566e3f83e5f)
 
-   O código para extração dos textos seguiu o modelo do primeiro código utilizado no site oficial, mas por se tratar de sites com estruturas difertenes, foi necessário criar um segundo arquivo contendo a referência de que tags deveriam ser extraídas e que tags deveriam ser desconsideradas pelo script.
-   Os textos passaram também por uma limpeza para remoção de linhas em branco e caracteres especiais e pequenos blocos de texto indesejados como "Leia Mais", "&quot" e outros, antes de serem adicionados ao arquivo *TEXTO_SAIDA.txt*.
+
+   O código para extração dos textos seguiu o mesmo formato utilizado no site oficial mas, por se tratar de sites com estruturas difertenes, foi necessário criar um novo arquivo contendo as referências de que tags deveriam ser extraídas e que tags deveriam ser desconsideradas pelo script para cada site diferente (CNN, SAPO, etc)
+   Os textos passaram também por uma limpeza para remoção de linhas em branco e caracteres especiais e pequenos blocos de texto indesejados como "Leia Mais", "&quot" e outros.   
 
    ##### Vídeos oficiais do partido disponíveis no canal do Youtube
-   Para os vídeos oficiais disponíveis no youtube, inicialmente cogitou-se fazer download dos audios dos videos com a *API do Youtube*, seguida da transcrição com a *API do Speech to Text do Google* mas a ferramenta *Download Youtube Subtitles* (https://www.downloadyoutubesubtitles.com/) resultou mais ágil para o volume de textos que se precisava baixar. Mesmo retirados do site oficial, a quantidade de vídeos disponíveis não justificaria o desenvolvimento de um código em Python devido à simplicidade e agilidade da alternativa web.
-   Os textos foram gravados em arquivos individuais, revisados superficialmente para conferir a qualidade da transcrição e tratados em Python para remoção de quebras de linhas. Por fim, os textos extraídos foram adicionados ao arquivo *TEXTO_SAIDA.txt*.
+   Para os vídeos oficiais disponíveis no youtube, inicialmente cogitou-se fazer download dos audios dos videos com a API do Youtube, seguida da transcrição com a API do Speech to Text do Google, mas ao final, a ferramenta Download Youtube Subtitles (https://www.downloadyoutubesubtitles.com/) resultou mais ágil para o volume de textos que se precisava baixar.
+   Os textos foram gravados em arquivos individuais e postos em uma pasta para tratamento via script onde foram remividas quebras de linhas.
+Ao fim do scarapping, os textos extraídos foram gravados no mesmo arquiv, "SAIDA.txt"
 
-#### Filtragem de Textos
-Mesmo nos textos extraídos de sites confiáveis e de publições oficiais do partido AD, ainda foi possível identificar partes de discursos que precisariam ser filtradas por questões éticas, especialmente nas transcrições de vídeos de candidatos do AD no youtube, tais como:
+#### Filtragem de Conteúdo
+Mesmo nos textos extraídos de sites confiáveis e de publições oficiais do partido AD, foi possível identificar partes de discursos que precisariam ser filtradas por questões éticas, principalmente nas transcrições de vídeos de candidatos do AD no youtube.
+Analisando os textos, foram encontradas falas como:
 - *"Eu sei que o líder do PS adora automóveis de luxo – agora parece que os esconde (...)"*
 
-Entendendo necessária uma rotina que verificasse e filtrasse partes antiéticas dos textos recolhidos, foram adotadas as seguintes bibliotecas:
-##### NLTK (Natural Language Toolkit):
-Utilizada para análise de sentimentos, tokenização e sinalização da polaridade de palavras.
-Com esta biblioteca, foi possível categorizar as frades do texto em positivas, neutras e negativas, deixando claro algumas frases antiéticas podem ter valor positivo enquanto outras, com valores negativos podem não infringir a ética. Em alguns casos, mesmo quando não é identificada linguagem negativa, ainda pode ocorrer discursos de ódio, assédio ou discriminatórios, o que dependerá bastante do contexto, por isso fez-se necessário criar uma lista de palavras que deveriam ser obrigatoriamente consideradas negativas.
+##### NLTK (Natural Language Toolkit)
+Embora não seja necessariamente uma regra, sabe-se que a partir da sinalização da polaridade de palavras do texto pode auxiliar na identificação de linguagem negativa associada a discursos de ódio, assédio ou criscriminatórios e, consequentemente, a conteúdo anti-ético.
+No caso dos textos analisados, algumas palavras poderiam acusar falsos negativos ou positivos. Palavras como "Socialista" ou "Pedro Nuno", por exemplo, tomam peso negativo nos textos devido ao contexto, visto que representam os opositores do partido AD nas eleições de 2024. Assim, foi criada uma lista contendo termos que devem ser considerados negativos, independente da polaridade sinalizada com a biblioteca NLTK.
 
-##### Spacy (Industrial-Strength Natural Language Processing):
-A lematização foi essencial para ajudar na solução da filtragem ética. A partir da comparação dos lemas das palavras obrigatoriamente negativas e dos lemas do texto, foi possível chegar a uma contagem mínima de três palavras negativas em uma frase para considerá-la potencialmente anti-ética.
+A partir da lista de palavras que obrigarotiamente devem ser consideradas negativas e da sinalização da polaridade das demais palavras, definiu-se o limite mínimo de três palavras negativas para que determinada frase pudesse ser considerada potencialmente anti-ética, como po exemplo:
+A frase: "O texto acusa ainda a governação socialista se ter caracterizado pela intromissão na gestão e relações acionistas de empresas privadas e até pelo enfraquecimento e tentativa de dominação das instituições 
+independentes de regulação económica e de justiça." é claramente o tipo de discurso que se deseja evitar que o chatbot aprenda, no entanto, teve score de sentimento = 0.0 (neutro) ao utilizar apenas a bilbioteca NLTK.
 
-O código de filtragem com a combinação da lista de palavras negativas, as funções da biblioteca NLTK e as funções de lematização da biblioteca Spacy permitiram filtrar frases como:
+Uma vez verificada a primeira classificação das frases, optou-se por criar uma lista de palavras que deveriam ser consideradas, obrigatoriamente negativas dentro do tema do projeto. Para isto, incluiu-se na lista, prinripalmente palavras e nomes que se associassem ao partido de oposção do AD, como "Pedro Nuno", [Governo] "anterior", "socialista", "socialismo", etc. Neste ponto, entende-se fundamental ter conhecimento dos textos e do contexto político Português atual. 
+
+##### Spacy (Industrial-Strength Natural Language Processing)
+A lematização de palavras foi adotada para facilitar a identificação dos termos da lista de palavras obrigatoriamente negativas em cada frase analisada.
+Após alguns testes considerando a contagem de lemas negativos por frase, definiu-se um limite mínimo de três lemas negativos combinados em uma única frase para considerá-la potencialmente entiética, portanto, filtrável do texto original.
+Com esta função, foram identificadas e removidas, frases como:
 - *"(...) comparar o doutor Nuno Santos com o professor Cavaco Silva é comparar um Ferrari com um calhambeque encostado numa garagem (...)"*
 - *"(...) o partido socialista e Pedro Nuno Santos que enquanto Ministro mostrou tudo menos preparação."*
 - *"(...) a experiência do líder do Partido Socialista está marcada por exemplos dessa cultura de informalidade (...)"*
 
-O texto com o filtro ético aplicado foi gravado no arquivo *TEXTO_SAIDA_FILTRADO.txt* e o processo de scrapping ficou definido da seguinte forma:
+O texto filtrado foi gravado em um arquivo *TEXTO_SAIDA_FILTRADO.txt* e o processo de Scrapping, definido da seguinte forma:
 
-![image 2 - Fluxo alcançado durante o tratamento de texto de scraping para treinamento de chatbot político](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/assets/121136618/e36e519b-5518-4f8b-8094-9e47af271652)
+![image](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/assets/121136618/6accb8c1-11dd-4c4c-b0ae-44e06c70e7e8)
+
 
 
 ### Tokenização
