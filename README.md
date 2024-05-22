@@ -286,7 +286,10 @@ def create_context(question, df, max_len=1800, size="ada"):
     return "\n\n###\n\n".join(returns)
     
 
-
+### Função Resposta_Pergunta
+  Usamos o modelo GPT-3.5 Turbo Instruct  que é uma versão melhorada do GPT-3 (Generative Pre-trained Transformer 3)
+  
+  
 ### Construção da Interface
 
 ### Testes e Validação
