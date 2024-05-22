@@ -136,7 +136,7 @@ my_api_key = read_openai_api_key()
 
 ### Embeddinging
 Embeddings são vetores ou matrizes de números que representam o significado e o contexto dos tokens processados pelo modelo, são usados para codificar e decodificar os textos
-de entrada e saída, 
+de entrada e saída, usamos o modelo "text-embedding-3-small" , por ser menor e muito eficiente, sendo uma versão melhorada do modelo "text-embedding-ada-002".
 
 i = 0
 
