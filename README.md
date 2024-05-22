@@ -33,7 +33,7 @@ A fonte de dados para este projeto foi constituída a partir das seguintes fonte
    ![image: Exermplos de discursos eticamente inapropriados encontrados no texto](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/assets/121136618/0f260690-def6-4b15-8845-3566e3f83e5f)
 
    O código para extração dos textos seguiu o modelo do primeiro código utilizado no site oficial, mas por se tratar de sites com estruturas difertenes, foi necessário criar um segundo arquivo contendo a referência de que tags deveriam ser extraídas e que tags deveriam ser desconsideradas pelo script.
-   Os textos passaram também por uma limpeza para remoção de linhas em branco e caracteres especiais e pequenos blocos de texto indesejados como "Leia Mais", "&quot" e outros.   
+   Os textos passaram também por uma limpeza para remoção de linhas em branco e caracteres especiais e pequenos blocos de texto indesejados como "Leia Mais", "&quot" e outros, antes de serem adicionados ao arquivo *TEXTO_SAIDA.txt*.
 
    ##### Vídeos oficiais do partido disponíveis no canal do Youtube
    Para os vídeos oficiais disponíveis no youtube, inicialmente cogitou-se fazer download dos audios dos videos com a API do Youtube, seguida da transcrição com a API do Speech to Text do Google, mas ao final, a ferramenta Download Youtube Subtitles (https://www.downloadyoutubesubtitles.com/) resultou mais ágil para o volume de textos que se precisava baixar.
