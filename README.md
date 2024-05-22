@@ -135,7 +135,27 @@ my_api_key = read_openai_api_key()
 #### ...
 
 ### Embeddinging
-#### ...
+i = 0
+embeddings = []
+for tex in df['texto']:
+    time.sleep(2)
+    print(i)
+    try:
+        tex1 = tex.replace("\n", " ")
+        embedding = openai.Embedding.create(input=tex1, engine='text-embedding-3-small')['data'][0]['embedding']
+        print("Fazendo embedding do texto")
+        embeddings.append(embedding)
+    except openai.error.RateLimitError:
+        print("Rate limit error, esperando 10 segundo antes de tentar novamente")
+        time.sleep(20)  
+        embedding = openai.Embedding(input=tex1, engine='text-embedding-3-small')['data'][0]['embedding']
+        print("embedding texto depois de esperar 20 segundos")
+        embeddings.append(embedding)
+    i+=1
+
+df['embeddings'] = embeddings
+df.to_csv('embeddings.csv')
+df.head()
 
 #### ...
 
