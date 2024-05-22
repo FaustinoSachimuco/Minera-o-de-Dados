@@ -105,19 +105,19 @@ def split_into_many(texto, max_tokens = max_tokens):
         chunk.append(sentence)
         tokens_so_far += token + 1
 
-    return chunks
+        return chunks
     
-shortened = []
-for row in df.iterrows():
-
-    if row[1]['texto'] is None:
-        continue
-
-    if row[1]['n_tokens'] > max_tokens:
-        shortened += split_into_many(row[1]['texto'])
+    shortened = []
+    for row in df.iterrows():
     
-    else:
-        shortened.append( row[1]['texto'] )
+        if row[1]['texto'] is None:
+            continue
+    
+        if row[1]['n_tokens'] > max_tokens:
+            shortened += split_into_many(row[1]['texto'])
+        
+        else:
+            shortened.append( row[1]['texto'] )
       
 
 
