@@ -432,7 +432,7 @@ block.launch(debug=True)
 
 # Futuros Desafios
 ## Gerenciamento de Contexto Dinâmico: 
-Lidar com o contexto dinâmico pode ser um desafio, 
+Lidar com o contexto dinâmico é um desafio, 
 especialmente em conversações longas ou em situações onde o contexto muda rapidamente. 
 Desenvolver estratégias para manter e atualizar o contexto de forma eficiente melhora a 
 capacidade do modelo de compreender e responder adequadamente às perguntas.
