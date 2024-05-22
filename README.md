@@ -240,6 +240,56 @@ df.head()
 </table>
 </div>
 
+### Função para Criar o Contexto
+
+  def create_context(question, df, max_len=1800, size="ada"):
+  """
+  Cria um contexto para uma pergunta encontrando o contexto mais similar no conjunto de embeddings gerado utilizando o Custom Knowledge.
+  """
+
+    """ Obter a embeddings para a pergunta que foi feita """
+    
+    q_embeddings = openai.Embedding.create(input=question, engine='text-embedding-3-small')['data'][0]['embedding']
+    
+
+    """ Obter as distâncias a partir dos embeddings """
+    
+    df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
+    
+
+
+    returns = []
+    
+    cur_len = 0
+    
+
+    """ Classifique por distância e adicione o texto ao contexto """ 
+    
+    for i, row in df.sort_values('distances', ascending=True).iterrows():
+    
+        
+        """ Adicionar o comprimento do texto ao comprimento atual """ 
+        
+        cur_len += row['n_tokens'] + 4
+        
+        
+    
+        if cur_len > max_len:
+        
+            break
+            
+        
+        """ Caso contrário, adicione-o ao texto que está sendo retornado """ 
+        
+        returns.append(row["texto"])
+        
+
+    """ Retornar o contexto
+    
+    return "\n\n###\n\n".join(returns)
+    
+
+
 ### Construção da Interface
 
 ### Testes e Validação
