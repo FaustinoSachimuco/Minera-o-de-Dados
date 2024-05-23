@@ -119,7 +119,9 @@ def split_into_many(texto, max_tokens = max_tokens):
         else:
             shortened.append( row[1]['texto'] )
       
-### função para leitura da nossa API
+### Função para leitura da nossa API
+
+Para leitura da API da OpenAI, foi criada a função abaixo. Esta é uma API pessoal que, para qualquer teste dos modelos treinados pela OpenAI, é obrigatório o uso de API para requisições de acesso aos endpoints do modelo.
 
 def read_openai_api_key():
 
