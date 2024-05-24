@@ -12,11 +12,11 @@
 Desenvolver e avaliar um modelo baseado em Linguagem Natural (LLM) para discutir com o usuário o as propostas de governo do Partido Aliança Democrática, com base em seu Programa Eleitoral apresentado nas eleições de 2024 - conteúdo do site oficial, vídeos do canal oficial e reportagens de sites confiáveis - de forma ética.
 
 # ÍNDICE
-## APRESENTAÇÕES
-### PRIMEIRA APRESENTAÇÃO
-### APRESENTAÇÃO FINAL
-## CÓDIGO FONTE
-### CÓDIGO DO SCRAPPING
-### CÓDIGO DO MODELO
-## IMAGENS
-## RELATÓRIO
+### APRESENTAÇÕES
+#### PRIMEIRA APRESENTAÇÃO
+#### APRESENTAÇÃO FINAL
+### CÓDIGO FONTE
+#### CÓDIGO DO SCRAPPING
+#### CÓDIGO DO MODELO
+### IMAGENS
+### RELATÓRIO
