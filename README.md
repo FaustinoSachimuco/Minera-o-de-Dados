@@ -17,6 +17,6 @@ Desenvolver e avaliar um modelo baseado em Linguagem Natural (LLM) para discutir
 #### [APRESENTAÇÃO FINAL](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/tree/63a96401b54994b724599175c0997175df2152fd/APRESENTA%C3%87%C3%95ES/APRESENTA%C3%87%C3%83O%20FINAL)
 ### [CÓDIGO FONTE](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/tree/649e8a4da2cd6dee9ed9b1c54e5d682405eb061b/C%C3%93DIGO%20FONTE)
 #### CÓDIGO DO SCRAPPING
-#### CÓDIGO DO MODELO
+#### [CÓDIGO DO MODELO](https://github.com/FaustinoSachimuco/chatBot_Alinca_Democratica/tree/ab12a2fbbbf52e0b07e2f2b85ca1dc4e4f482e4d/C%C3%93DIGO%20FONTE/C%C3%93DIGO%20DO%20MODELO)
 ### IMAGENS
 ### RELATÓRIO
